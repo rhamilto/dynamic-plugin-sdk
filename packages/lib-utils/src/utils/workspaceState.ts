@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const WORKSPACE_KEY = 'sdk/active-workspace';
 export type WorkspaceContextState = {
   activeWorkspace: string | null;
@@ -25,7 +23,7 @@ export const workspaceState = () => {
 
   // add subscriber (hook) to registry
   function subscribe(event: UpdateEvents, onUpdate: () => void) {
-    const id = uuidv4();
+    const id = crypto.randomUUID();
     // const id = `${Date.now()}${Math.random()}`;
     subscriptions[event][id] = onUpdate;
     // trigger initial update to get the initial data

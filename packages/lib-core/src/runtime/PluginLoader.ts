@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import type { AnyObject } from '@monorepo/common';
 import { cloneDeepOnlyCloneableValues, consoleLogger, ErrorWithCause } from '@monorepo/common';
 import { identity, noop, pickBy } from 'lodash';
@@ -280,7 +279,9 @@ export class PluginLoader implements PluginLoaderInterface {
       };
     }
 
-    const pluginBuildHash = isRemoteManifest ? (manifest.buildHash ?? uuidv4()) : uuidv4();
+    const pluginBuildHash = isRemoteManifest
+      ? (manifest.buildHash ?? crypto.randomUUID())
+      : crypto.randomUUID();
 
     let loadedExtensions = manifest.extensions.map<LoadedExtension>((e, index) => ({
       ...cloneDeepOnlyCloneableValues(e),
@@ -319,7 +320,7 @@ export class PluginLoader implements PluginLoaderInterface {
         }
 
         const scriptURL = resolveURL(manifest.baseURL, scriptName, (url) => {
-          url.searchParams.set('cacheBuster', uuidv4());
+          url.searchParams.set('cacheBuster', Date.now().toString());
           return url;
         });
 

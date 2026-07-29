@@ -1125,7 +1125,6 @@ __metadata:
     pluralize: "npm:^8.0.0"
     react-redux: "npm:^8.0.5"
     typesafe-actions: "npm:^4.4.2"
-    uuid: "npm:^11.1.1"
   peerDependencies:
     "@openshift/dynamic-plugin-sdk": ^4 || ^5 || ^6 || ^7 || ^8
     react: ^18 || ^19
@@ -1195,7 +1194,6 @@ __metadata:
   dependencies:
     lodash: "npm:^4.17.23"
     semver: "npm:^7.7.3"
-    uuid: "npm:^11.1.1"
     zod: "npm:^3.25.67"
   peerDependencies:
     react: ^18 || ^19
@@ -1208,7 +1206,6 @@ __metadata:
   dependencies:
     lodash: "npm:^4.17.23"
     semver: "npm:^7.7.3"
-    uuid: "npm:^11.1.1"
     zod: "npm:^3.25.67"
   peerDependencies:
     react: ^18 || ^19
@@ -1221,7 +1218,6 @@ __metadata:
   dependencies:
     lodash: "npm:^4.17.23"
     semver: "npm:^7.7.3"
-    uuid: "npm:^11.1.1"
     zod: "npm:^3.25.67"
   peerDependencies:
     react: ^18 || ^19
@@ -9283,15 +9279,6 @@ __metadata:
   version: 0.4.0
   resolution: "utila@npm:0.4.0"
   checksum: 10c0/2791604e09ca4f77ae314df83e80d1805f867eb5c7e13e7413caee01273c278cf2c9a3670d8d25c889a877f7b149d892fe61b0181a81654b425e9622ab23d42e
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^11.1.1":
-  version: 11.1.1
-  resolution: "uuid@npm:11.1.1"
-  bin:
-    uuid: dist/esm/bin/uuid
-  checksum: 10c0/9e3af58eba872ece5a5e76f4773a94fc78a0ef2c2444c38dbe6b42f41dadf76c01850fd783604f27986f6195e6286aef064d45987d401b2a33127b98ddf7c0c5
   languageName: node
   linkType: hard
 
