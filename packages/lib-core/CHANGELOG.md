@@ -1,5 +1,9 @@
 # Changelog for `@openshift/dynamic-plugin-sdk`
 
+## 9.0.1 - 2026-07-30
+
+- Remove absolute URL validation for `RemotePluginManifest.baseURL` ([#334])
+
 ## 9.0.0 - 2026-07-22
 
 > This release modifies the `useResolvedExtensions` hook, requiring callers to pass the extensions
@@ -7,7 +11,7 @@
 
 - BREAKING: Modify `useResolvedExtensions` hook to accept `extensions` array as a parameter ([#313])
 - Deep freeze plugin manifest object when adding plugins to the `PluginStore` ([#325])
-- Replace `yup` with `zod` for object validation ([#326])
+- Replace Yup with Zod for object validation ([#326])
 - Expose `visitDeep` utility function ([#313])
 
 ## 8.2.0 - 2026-03-19
@@ -151,3 +155,4 @@
 [#313]: https://github.com/openshift/dynamic-plugin-sdk/pull/313
 [#325]: https://github.com/openshift/dynamic-plugin-sdk/pull/325
 [#326]: https://github.com/openshift/dynamic-plugin-sdk/pull/326
+[#334]: https://github.com/openshift/dynamic-plugin-sdk/pull/334

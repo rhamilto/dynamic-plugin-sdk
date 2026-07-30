@@ -69,7 +69,7 @@ export const pluginRuntimeMetadataSchema = z.object({
  * Schema for a `RemotePluginManifest` object.
  */
 export const remotePluginManifestSchema = pluginRuntimeMetadataSchema.extend({
-  baseURL: z.string().url(),
+  baseURL: z.string(),
   extensions: z.array(extensionSchema),
   loadScripts: z.array(z.string()).nonempty(),
   registrationMethod: z.enum(['callback', 'custom']),
