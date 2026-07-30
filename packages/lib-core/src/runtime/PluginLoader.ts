@@ -1,5 +1,11 @@
 import type { AnyObject } from '@monorepo/common';
-import { cloneDeepOnlyCloneableValues, consoleLogger, ErrorWithCause } from '@monorepo/common';
+import {
+  cloneDeepOnlyCloneableValues,
+  consoleLogger,
+  ErrorWithCause,
+  randomString,
+  uuidv4,
+} from '@monorepo/common';
 import { identity, noop, pickBy } from 'lodash';
 import type { RangeOptions } from 'semver';
 import { satisfies, valid, validRange } from 'semver';
@@ -279,9 +285,7 @@ export class PluginLoader implements PluginLoaderInterface {
       };
     }
 
-    const pluginBuildHash = isRemoteManifest
-      ? (manifest.buildHash ?? crypto.randomUUID())
-      : crypto.randomUUID();
+    const pluginBuildHash = isRemoteManifest ? (manifest.buildHash ?? uuidv4()) : uuidv4();
 
     let loadedExtensions = manifest.extensions.map<LoadedExtension>((e, index) => ({
       ...cloneDeepOnlyCloneableValues(e),
@@ -320,7 +324,7 @@ export class PluginLoader implements PluginLoaderInterface {
         }
 
         const scriptURL = resolveURL(manifest.baseURL, scriptName, (url) => {
-          url.searchParams.set('cacheBuster', Date.now().toString());
+          url.searchParams.set('cacheBuster', randomString());
           return url;
         });
 

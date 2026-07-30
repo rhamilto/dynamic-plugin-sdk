@@ -4,3 +4,4 @@ export * from './types/common';
 export * from './types/objects';
 export * from './utils/logger';
 export * from './utils/objects';
+export * from './utils/strings';
