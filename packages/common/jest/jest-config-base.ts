@@ -6,9 +6,6 @@ const config: JestConfigWithTsJest = {
 
   testMatch: ['**/*.test.(js|jsx|ts|tsx)'],
 
-  // Allow transforming ESM-only packages like uuid
-  transformIgnorePatterns: ['/node_modules/(?!uuid/)'],
-
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',

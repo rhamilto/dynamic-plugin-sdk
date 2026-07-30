@@ -1,6 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
 import type { AnyObject } from '@monorepo/common';
-import { cloneDeepOnlyCloneableValues, consoleLogger, ErrorWithCause } from '@monorepo/common';
+import {
+  cloneDeepOnlyCloneableValues,
+  consoleLogger,
+  ErrorWithCause,
+  randomString,
+  uuidv4,
+} from '@monorepo/common';
 import { identity, noop, pickBy } from 'lodash';
 import type { RangeOptions } from 'semver';
 import { satisfies, valid, validRange } from 'semver';
@@ -319,7 +324,7 @@ export class PluginLoader implements PluginLoaderInterface {
         }
 
         const scriptURL = resolveURL(manifest.baseURL, scriptName, (url) => {
-          url.searchParams.set('cacheBuster', uuidv4());
+          url.searchParams.set('cacheBuster', randomString());
           return url;
         });
 

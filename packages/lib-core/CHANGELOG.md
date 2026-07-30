@@ -1,8 +1,9 @@
 # Changelog for `@openshift/dynamic-plugin-sdk`
 
-## 9.0.1 - 2026-07-30
+## 9.1.0 - 2026-07-31
 
 - Remove absolute URL validation for `RemotePluginManifest.baseURL` ([#334])
+- Remove `uuid` dependency ([#333])
 
 ## 9.0.0 - 2026-07-22
 
@@ -155,4 +156,5 @@
 [#313]: https://github.com/openshift/dynamic-plugin-sdk/pull/313
 [#325]: https://github.com/openshift/dynamic-plugin-sdk/pull/325
 [#326]: https://github.com/openshift/dynamic-plugin-sdk/pull/326
+[#333]: https://github.com/openshift/dynamic-plugin-sdk/pull/333
 [#334]: https://github.com/openshift/dynamic-plugin-sdk/pull/334
