@@ -2,7 +2,7 @@
 
 ## 5.3.0 - 2026-07-22
 
-- Replace `yup` with `zod` for object validation ([#326])
+- Replace Yup with Zod for object validation ([#326])
 
 ## 5.2.0 - 2026-06-11
 
